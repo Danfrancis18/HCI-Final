@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tara Kain Tayo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #fff;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        background: url('https://img.freepik.com/free-vector/shiny-bokeh-pattern-banner-creative-art-design-vector_1017-48616.jpg?semt=ais_hybrid&w=740') center center/cover no-repeat;
+        color: #fff;
+        padding: 1rem 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex: 1;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .menu-icon {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-menu li {
+        margin-left: 1.5rem;
+    }
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+    .nav-link.active, .nav-link:hover {
+        color: #ffe0b2;
+    }
+    section {
+        display: none;
+        padding: 2rem 1rem;
+        max-width: 900px;
+        margin: auto;
+    }
+    section.active {
+        display: block;
+    }
+    .recipes-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1.5rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .recipe-card {
+        background: #ffe0b2;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.173);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1400px;
+        min-height: 40px;
+        overflow: hidden;
+    }
+    .recipe-photo {
+        width: 200px;
+        height: 200px;
+        background: #ffe0b2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+    .recipe-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px; /* Ensures image corners are rounded */
+    }
+    
+    .recipe-info {
+        padding: 1rem;
+        flex: 1;
+    }
+    @media (max-width: 900px) {
+        .recipes-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .recipe-card {
+            max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .recipe-photo {
+            width: 350px;
+            height: 300px;
+            padding-top: 20px;
+            background: #ffe0b2; /* This background color is visible in the padding area */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .blog-story-card {
+            width: 100%;
+            max-width: 350px;
+        }
+        .blog-stories-container {
+            width: 100%;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
+    }
+    @media (max-width: 700px) {
+        .navbar-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background: #ff7043;
+            position: absolute;
+            left: 0;
+            top: 56px;
+        }
+        .navbar-menu li {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+        }
+        .menu-toggle:checked + .menu-icon + .navbar-menu {
+            display: flex;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">BYAHE YUM</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="navbar-menu">
+            <li><a href="#recipes" class="nav-link active">Recipes</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <section id="recipes" class="active">
+                    <img src="" alt="" style="max-width:100%; max-height:100%; object-fit:cover;">
+        <div class="recipes-container">
+            <div class="recipe-card">
+                <div class="recipe-photo">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spaghetti_carb-a2ffbde.jpg?quality=90&webp=true&resize=375,341" alt="">
+                </div>
+                <div class="recipe-info">
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>
+                        <strong>Description:</strong> A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. Creamy, savory, and quick to prepare.<br>
+                        <strong>Ingredients:</strong> Spaghetti, eggs, pancetta, Parmesan cheese, black pepper.<br>
+                        <strong>Instructions:</strong> Cook pasta. Fry pancetta. Mix eggs and cheese. Combine all with pasta and pancetta off heat.
+                    </p>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-photo">
+                 <img src="https://www.maggi.ph/sites/default/files/styles/home_stage_1500_700/public/srh_recipes/41d16b3eb7ce08aba9e9114f304f5d87.jpg?h=28121b77&itok=thJoFsmE" alt="">   
+                </div>
+                <div class="recipe-info">
+                    <h3>Avocado Toast</h3>
+                    <p>
+                        <strong>Description:</strong> Toasted bread topped with mashed avocado, a sprinkle of salt, pepper, and optional toppings like eggs or tomatoes.<br>
+                        <strong>Ingredients:</strong> Bread, avocado, salt, pepper, toppings (egg, tomato, etc).<br>
+                        <strong>Instructions:</strong> Toast bread. Mash avocado with salt and pepper. Spread on toast. Add toppings as desired.
+                    </p>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-photo">
+                    <img src="https://amiablefoods.com/wp-content/uploads/leche-flan-hero-1152x1536.jpg" alt="">
+                </div>
+                <div class="recipe-info">
+                    <h3>Filipino Leche Flan</h3>
+                    <p>
+                        <strong>Description:</strong> A rich and creamy Filipino dessert made with caramelized sugar, egg yolks, and condensed milk. Silky smooth and sweet.<br>
+                        <strong>Ingredients:</strong> Egg yolks, condensed milk, evaporated milk, sugar, vanilla extract.<br>
+                        <strong>Instructions:</strong> Caramelize sugar in a llanera or mold. Mix egg yolks, condensed milk, evaporated milk, and vanilla. Pour mixture over caramel. Steam for 30-40 minutes until set...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Pulsing Orange Wave Background -->
+        <div id="wave-bg" style="position:absolute; left:0; top:0; width:100%; height:600px; z-index:-1; pointer-events:none; overflow:hidden;">
+            <svg id="wave-svg" width="100%" height="100%" viewBox="0 0 1440 600" preserveAspectRatio="none" style="display:block; position:absolute; left:0; top:0;">
+            <path id="wave-path-back"
+                d="M0,320 Q360,470 720,320 T1440,320 V600 H0 Z"
+                fill="#ff9800" opacity="0.35"/>
+            <path id="wave-path"
+                d="M0,300 Q360,450 720,300 T1440,300 V600 H0 Z"
+                fill="#ffc400" opacity="0.4"/>
+            </svg>
+        </div>
+        <script>
+        (function() {
+            const wavePath = document.getElementById('wave-path');
+            const wavePathBack = document.getElementById('wave-path-back');
+            let t = 0;
+            function animateWave() {
+                t += 0.012; // slower animation
+                // Foreground wave (higher frequency)
+                const freq1 = 1.0;
+                const amplitude = 90 + 40 * Math.sin(t * freq1 * 0.7 + Math.cos(t * 0.5)); // More playful, fun waves
+                const baseY = 400;
+                const y1 = 300 + amplitude * Math.sin(t * freq1);
+                const y2 = 300 + amplitude * Math.sin(t * freq1 + Math.PI / 2);
+                const y3 = 300 + amplitude * Math.sin(t * freq1 + Math.PI);
+                const d = `
+                    M0,${y1}
+                    Q360,${y2} 720,${y1}
+                    T1440,${y3}
+                    V600 H0 Z
+                `;
+                wavePath.setAttribute('d', d);
+
+                // Background wave (lower frequency, more translucent)
+                const freq2 = 0.6;
+                const amplitudeBack = amplitude * 0.8;
+                const y1b = 320 + amplitudeBack * Math.sin(t * freq2 + 0.5);
+                const y2b = 320 + amplitudeBack * Math.sin(t * freq2 + Math.PI / 2 + 0.5);
+                const y3b = 320 + amplitudeBack * Math.sin(t * freq2 + Math.PI + 0.5);
+                const dBack = `
+                    M0,${y1b}
+                    Q360,${y2b} 720,${y1b}
+                    T1440,${y3b}
+                    V600 H0 Z
+                `;
+                wavePathBack.setAttribute('d', dBack);
+
+                requestAnimationFrame(animateWave);
+            }
+            animateWave();
+            // Responsive: adjust SVG height on resize
+            function resizeWave() {
+                const waveBg = document.getElementById('wave-bg');
+                const section = document.getElementById('recipes');
+                const sectionRect = section.getBoundingClientRect();
+                waveBg.style.top = (section.offsetTop + section.offsetHeight - waveBg.offsetHeight) + 'px';
+                waveBg.style.height = Math.max(500, 600) + 'px';
+            }
+            window.addEventListener('resize', resizeWave);
+            setTimeout(resizeWave, 100);
+        })();
+        </script>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-stories-container">
+            <div class="blog-story-card">
+                <h3>Adobo and the Ex</h3>
+                <p>One time, I tried cooking adobo for my crush—she said it was so good, she almost forgot to text her ex back. Ayos ba?</p>
+            </div>
+            <div class="blog-story-card">
+                <h3>Lola’s Rice Wisdom</h3>
+                <p>My lola says if you can’t cook rice without burning it, you’re not ready for love. That’s why I’m still single—lutong microwave lang ako!</p>
+            </div>
+            <div class="blog-story-card">
+                <h3>Unlimited Rice Romance</h3>
+                <p>They say the way to someone’s heart is through their stomach, but in my case, it’s through unlimited rice at Mang Inasal. Walang tapon!</p>
+            </div>
+            <div class="blog-story-card">
+                <h3>Sinangag Surprise</h3>
+                <p>I once made sinangag for breakfast, but I accidentally used sugar instead of salt. My kuya said, “Pwede na, pang-dessert!” At least, hindi nasayang.</p>
+            </div>
+            <div class="blog-story-card">
+                <h3>Pancit Birthday Wish</h3>
+                <p>Every birthday, my tita insists on pancit for long life. But after three servings, I think my life just got longer—and my belt, tighter!</p>
+            </div>
+            <div class="blog-story-card">
+                <h3>Halo-Halo Weather</h3>
+                <p>It was raining hard, but I still craved halo-halo. My mom said, “Anak, malamig na nga, gusto mo pa lamigin!” Sabi ko, “Para balanced ang buhay!”</p>
+            </div>
+        </div>
+        <style>
+        .blog-stories-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+        .blog-story-card {
+            background: #fff8e1;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 1.5px 4px rgba(255,152,0,0.09);
+            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            max-width: 1400px;
+            width: 100%;
+            transition: box-shadow 0.2s;
+        }
+        .blog-story-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(255,152,0,0.13);
+        }
+        </style>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This food blog shares delicious recipes and culinary inspiration. Created with love for food enthusiasts. And a Final Project for HCI Hehe, from Dan Francis M. Belarmino, IT-3205</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                const target = this.getAttribute('href');
+                document.querySelector(target).classList.add('active');
+                this.classList.add('active');
+                // Close menu on mobile
+                    document.getElementById('menu-toggle').checked = false;
+            });
+        });
+        </script>
+</body>
+</html>
